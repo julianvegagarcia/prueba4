@@ -1,0 +1,9 @@
+@inject Microsoft.AspNetCore.Authorization.IAuthorizationService Authoriation
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    var isAdmin = await Authoriation.AuthorizeAsync(User, null, "Admin");
+}
